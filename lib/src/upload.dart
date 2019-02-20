@@ -1,4 +1,5 @@
 class Upload {
+  Future upload() {}
   // 直传
   Future directUpload() {}
 
