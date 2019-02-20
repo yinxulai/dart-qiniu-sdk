@@ -1,7 +1,7 @@
 class Upload {
   // 直传
-  directUpload() {}
+  Future directUpload() {}
 
   // 分片
-  resumeUpload() {}
+  Future resumeUpload() {}
 }
