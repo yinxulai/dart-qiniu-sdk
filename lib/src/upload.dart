@@ -1,3 +1,6 @@
+
+import 'package:http/http.dart';
+
 class Upload {
   Future upload() {}
   // 直传
