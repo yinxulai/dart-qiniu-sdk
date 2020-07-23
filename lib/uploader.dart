@@ -5,7 +5,7 @@ abstract class TokenProvider {
 }
 
 class StaticTokenProvider implements TokenProvider {
-  final token;
+  final String token;
   StaticTokenProvider(this.token) : assert(token != "" && token != null);
 
   @override
@@ -15,13 +15,7 @@ class StaticTokenProvider implements TokenProvider {
 }
 
 class Uploader {
-  final String token;
   final TokenProvider tokenProvider;
-  const Uploader({this.token, this.tokenProvider})
-      : assert(token != null || tokenProvider != null)
-      : token != null ?? tokenProvider = StaticTokenProvider(token)
-      ;
-
-  upload({Assets object, String key, putExtra, config}){
-  }
+  const Uploader({String token, this.tokenProvider})
+      : assert(token != null || tokenProvider != null);
 }
